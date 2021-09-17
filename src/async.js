@@ -29,6 +29,12 @@ export const updateVariable= async (procId, varName, newVal, newValType) => {
   return data
 }
 
+export const getAllVariables = async (procId) => {
+  const endpoint = `/process-instance/${procId}/variables`;
+  const data = await reqHandler.get(endpoint)
+  return data
+}
+
 const sendSignal = async (procId) => {
   const endpoint = `/message`
   const payload = {"messageName": "ui-updated", "processInstanceId": `${procId}`}

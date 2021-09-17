@@ -16,7 +16,7 @@ export const process_defKey = 'pdpa-dbno'
 startInstance(process_defKey).then((response, error) => {
   if (error) return (<h1>Error occurred: { error }</h1>);
   const process_id = response.data.id;
-  console.log(process_id)
+  console.log(process_id);
 
   ReactDOM.render(
     <App process_id = { process_id }/>,
