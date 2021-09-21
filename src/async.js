@@ -17,21 +17,21 @@ export const startInstance = async (processDefKey) => {
 
 export const getVariable = async (procId, varName) => {
     const endpoint = `/process-instance/${procId}/variables/${varName}`
-    const data = await reqHandler.get(endpoint)
+    const {data} = await reqHandler.get(endpoint)
     return data
 }
 
 export const updateVariable= async (procId, varName, newVal, newValType) => {
   const endpoint = `/process-instance/${procId}/variables/${varName}`
   const payload = {"value": newVal, "type": newValType};
-  const data = await reqHandler.put(endpoint, payload)
+  const {data} = await reqHandler.put(endpoint, payload)
   sendSignal(procId)
   return data
 }
 
 export const getAllVariables = async (procId) => {
   const endpoint = `/process-instance/${procId}/variables`;
-  const data = await reqHandler.get(endpoint)
+  const {data} = await reqHandler.get(endpoint)
   return data
 }
 
