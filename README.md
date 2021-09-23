@@ -1,11 +1,13 @@
-# PDPA-DBNO_reactCamund: A further experiment on having a React front-end with Camunda
+# PDPA-DBNO_reactCamunda: A further experiment on having a React front-end with Camunda
+
+Based upon work from @mengwong on the visual language of legal obligations as AndOr trees.
 
 It hasn't been built for deployment. 
 
 ## Description
 Camunda got big bucks from seed funding recently and it got people excited about BPMN & DMN again. 
 
-Here's an example of how to connect a front-end powered by the React ecosystem with Camunda as a REPL-like enviroment. Given that Camunda's 
+Here's an example of how to connect a front-end powered by the React ecosystem with Camunda as a REPL-like enviroment. 
 
 ## Requires
 - Yarn
@@ -18,6 +20,10 @@ After installing Camunda Platform Run & Camunda Modeler, [start your platform in
 
 Open `eventDriven.bpmn` and `investment-strategy.dmn` with Camunda Modeler and [deploy them](https://docs.camunda.org/get-started/quick-start/deploy/#use-the-camunda-modeler-to-deploy-the-process).
 
-Upon successful deployment of the BPMN process & DRD diagram, `cd` to project root and run `yarn start`. `react-scripts` should take care of the rest.
+Upon successful deployment of the BPMN process & DRD diagram,
+ 1. `cd` to `resources` and run `node worker.js`
+ 2. `cd` to project root and run `yarn start`. 
+
+`react-scripts` should take care of the rest.
 
 
